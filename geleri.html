@@ -1,11 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>geleri gambar</title>
+
+
+  
+
+
 <style>
 * {box-sizing: border-box}
 body {
-  font-family: Verdana, sans-serif; margin:0}
+  margin:0}
   background-image: url(Computer-screen-code-glitch-animation-gif-background-free.gif);
 .mySlides {display: none}
 img {vertical-align: middle;}
@@ -103,10 +111,147 @@ body {
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
 }
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: rgb(2, 0, 37);
+   color: white;
+   text-align: center;
+}
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0c0527;
+  height: 80px;
+  padding: 0 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+}
+
+.logo a {
+  color: white;
+  font-size: 24px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.menu li {
+  margin: 0 10px;
+}
+
+.menu a {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+/* Hamburger menu */
+.menu-icon {
+  cursor: pointer;
+  display: none;
+  height: 30px;
+  position: relative;
+  width: 30px;
+}
+
+.menu-icon span {
+  background-color: rgb(255, 255, 255);
+  display: block;
+  height: 2px;
+  position: absolute;
+  top: calc(50% - 1px);
+  width: 100%;
+}
+
+.menu-icon span::before,
+.menu-icon span::after {
+  background-color: rgb(255, 255, 255);
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.menu-icon span::before {
+  top: -8px;
+}
+
+.menu-icon span::after {
+  bottom: -8px;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    flex: 1;
+  }
+  .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    background-color: #0b0d33;
+    padding: 10px;
+  }
+  .menu li {
+    margin: 10px 0;
+   
+  }
+  .menu-icon {
+    display: block;
+  }
+  #menu-toggle:checked ~ .menu {
+    display: flex;
+  }
+  
+  
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("Computer-screen-code-glitch-animation-gif-background-free.gif");
+}
+
+@media (max-width: 600px) {
+  nav, article {
+    width: 90%;
+    height: auto;
+  }
 </style>
 </head>
 <body>
-<br><br>
+  <nav>
+    <div class="logo">
+    <img src="photo_2023-02-15_22-16-35.jpg" width="80" height="80">x<img src="download.jpeg" width="80" height="80">
+    </div>
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon"><span></span></label>
+    <ul class="menu">
+      <li><a href="kelabrobotik.html">laman utama</a></li>
+      <li><a href="geleri.html">geleri gambar</a></li>
+      <li><a href="program.html"></a></li>
+    </ul>
+  </nav>
+  <div class="footer">
+    <p>Copyright © 2023 KelabRobotik@<strong>SMKTKK</strong></p>
+  </div>
 <br><br>
 <br><br>
 <br><br>

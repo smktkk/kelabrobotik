@@ -7,8 +7,24 @@
     <title>Sertai kami</title>
 </head>
 <body>
-   <center> <button  class="button"><a href="https://forms.gle/LC1TzRX6BgSnrnaEA" target="_blank">pergi ke laman web</a></button></center>
-    
+  <nav>
+    <div class="logo">
+    <img src="photo_2023-02-15_22-16-35.jpg" width="80" height="80">x<img src="download.jpeg" width="80" height="80">
+    </div>
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon"><span></span></label>
+    <ul class="menu">
+      <li><a href="kelabrobotik.html">laman utama</a></li>
+      <li><a href="geleri.html">geleri gambar</a></li>
+      <li><a href="program.html"></a></li>
+    </ul>
+  </nav>
+  <div class="footer">
+    <p>Copyright © 2023 KelabRobotik@<strong>SMKTKK</strong></p>
+  </div>
+  <div class="vertical-center">
+   <center> <button type="button" class="btn"><a href="https://forms.gle/LC1TzRX6BgSnrnaEA" target="_blank">pergi ke laman web</a></button></center>
+  </div>   
 
 
     
@@ -19,8 +35,155 @@
     padding: 0;
     background-image: url("Computer-screen-code-glitch-animation-gif-background-free.gif");
 }
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: rgb(2, 0, 37);
+   color: white;
+   text-align: center;
+}
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0c0527;
+  height: 80px;
+  padding: 0 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+}
+
+.logo a {
+  color: white;
+  font-size: 24px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.menu li {
+  margin: 0 10px;
+}
+
+.menu a {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+/* Hamburger menu */
+.menu-icon {
+  cursor: pointer;
+  display: none;
+  height: 30px;
+  position: relative;
+  width: 30px;
+}
+
+.menu-icon span {
+  background-color: rgb(255, 255, 255);
+  display: block;
+  height: 2px;
+  position: absolute;
+  top: calc(50% - 1px);
+  width: 100%;
+}
+
+.menu-icon span::before,
+.menu-icon span::after {
+  background-color: rgb(255, 255, 255);
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.menu-icon span::before {
+  top: -8px;
+}
+
+.menu-icon span::after {
+  bottom: -8px;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    flex: 1;
+  }
+  .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    background-color: #0b0d33;
+    padding: 20px;
+  }
+  .menu li {
+    margin: 10px 0;
+  }
+  .menu-icon {
+    display: block;
+  }
+  #menu-toggle:checked ~ .menu {
+    display: flex;
+  }
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("Computer-screen-code-glitch-animation-gif-background-free.gif");
+}
+
+@media (max-width: 600px) {
+  nav, article {
+    width: 90%;
+    height: auto;
+  }
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+button{
+height: 55px;
+width: 135px;
+border: 0;
+padding:12px 10px;
+outline: white;
+color:#fff ;
+background: linear-gradient(to right, #1500ff,#09014b);
+border-radius: 6px;
+cursor: pointer;
+transition: width 0.5s;
+}
+button:hover{
+        width: 160px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;}
+
+
 a:link {
-  color: rgb(255, 0, 0);
+  color: rgb(255, 255, 255);
   background-color: transparent;
   text-decoration: none;
 }
@@ -30,7 +193,7 @@ a:visited {
   text-decoration: none;
 }
 a:hover {
-  color: rgb(255, 0, 0);
+  color: rgb(0, 0, 0);
   background-color: transparent;
   text-decoration: underline;
 }
